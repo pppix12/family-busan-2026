@@ -35,6 +35,9 @@
   }
   .info { flex: 1; }
   .info .name { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+  .info .name a { color: inherit; text-decoration: none; border-bottom: 1.5px dotted #2a9d8f; }
+  .info .name a:hover { color: #2a9d8f; }
+  .info .name a .pin { font-size: 11px; color: #2a9d8f; margin-left: 3px; }
   .info .name .tag {
     font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 10px;
     margin-left: 6px; vertical-align: middle;
@@ -103,6 +106,7 @@
   <span>📍 <b>관광/명소</b></span>
   <span>🏨 <b>숙소</b></span>
   <span>🚉 <b>교통허브</b></span>
+  <span style="color:#2a9d8f;">🔗 <b>장소명 클릭 시 네이버 지도</b></span>
 </div>
 
 <!-- DAY 1 -->
@@ -112,7 +116,7 @@
   <div class="stop">
     <div class="time">11:00</div>
     <div class="info">
-      <div class="name">🚉 부산역 <span class="tag hub">합류</span></div>
+      <div class="name">🚉 <a href="https://map.naver.com/p/search/부산역" target="_blank">부산역<span class="pin">🔗</span></a> <span class="tag hub">합류</span></div>
       <div class="desc">KTX 도착 → 가족(차) 합류. 점심은 부산역 건물 2층 이재모피자 부산역점에서 바로.</div>
     </div>
   </div>
@@ -120,7 +124,7 @@
   <div class="stop">
     <div class="time">11:30</div>
     <div class="info">
-      <div class="name">🍽 이재모피자 부산역점 <span class="tag meal">점심</span></div>
+      <div class="name">🍽 <a href="https://map.naver.com/p/search/이재모피자 부산역점" target="_blank">이재모피자 부산역점<span class="pin">🔗</span></a> <span class="tag meal">점심</span></div>
       <div class="desc">부산역 올리브영 바로 2층. KTX 내려서 역 안에서 바로. 월~토 10~21시, 일요일 휴무. 키오스크에서 6인 단체석 선택 가능. 본점보다 웨이팅 훨씬 짧음.</div>
       <div class="park">🅿 <b>주차 고민 불필요</b> — 부산역 건물 안 2층. 가족 차는 부산역 주차장 이용(합류 지점). 식사 후 차로 국제시장 이동.</div>
     </div>
@@ -129,7 +133,7 @@
   <div class="stop">
     <div class="time">13:00</div>
     <div class="info">
-      <div class="name">📍 국제시장 · BIFF광장 <span class="tag spot">엄마 희망</span></div>
+      <div class="name">📍 <a href="https://map.naver.com/p/search/국제시장" target="_blank">국제시장 · BIFF광장<span class="pin">🔗</span></a> <span class="tag spot">엄마 희망</span></div>
       <div class="desc">씨앗호떡·길거리음식·구경. 평지라 무릎 부담 적음. 부산역점에서 차 5분.</div>
       <div class="park">🅿 <b>자갈치 지하 공영주차장</b>에 대고 도보 이동(국제시장·BIFF광장·남포동 먹자골목 다 도보권). 지하라 주차 편함.</div>
     </div>
@@ -138,7 +142,7 @@
   <div class="stop">
     <div class="time">15:00</div>
     <div class="info">
-      <div class="name">📍 흰여울문화마을 <span class="tag spot">영도</span></div>
+      <div class="name">📍 <a href="https://map.naver.com/p/search/흰여울문화마을" target="_blank">흰여울문화마을<span class="pin">🔗</span></a> <span class="tag spot">영도</span></div>
       <div class="desc">바다 절벽길 산책. 평지 위주, 카페에서 휴식.</div>
       <div class="park">🅿 마을 안 차 진입 어려움 → <b>흰여울 공영주차장</b> 또는 절영해안로 갓길. 주말엔 협소하니 일찍.</div>
     </div>
@@ -147,7 +151,7 @@
   <div class="stop">
     <div class="time">16:30</div>
     <div class="info">
-      <div class="name">🏨 광안리슈빌DS 체크인 <span class="tag hotel">숙소</span></div>
+      <div class="name">🏨 <a href="https://map.naver.com/p/search/광안리슈빌디에스" target="_blank">광안리슈빌DS 체크인<span class="pin">🔗</span></a> <span class="tag hotel">숙소</span></div>
       <div class="desc">민락동. 짐 풀고 휴식 후 출발.</div>
       <div class="park">🅿 건물 지하주차장 이용(체크인 시 확인).</div>
     </div>
@@ -156,7 +160,7 @@
   <div class="stop">
     <div class="time">17:00</div>
     <div class="info">
-      <div class="name">🍽 난파센 <span class="tag meal">이른 저녁</span></div>
+      <div class="name">🍽 <a href="https://map.naver.com/p/search/난파센 남천동" target="_blank">난파센<span class="pin">🔗</span></a> <span class="tag meal">이른 저녁</span></div>
       <div class="desc">남천동 텐동 맛집. 17시 오픈런. 먹고 미포로 이동.</div>
       <div class="park">🅿 숙소에서 <b>차로 5분</b>(도보는 좀 멈, 약 20분). 가게 자체 주차 협소 → 인근 공영/노상. 일몰 보러 미포 갈 거라 차로 이동 권장.</div>
     </div>
@@ -165,7 +169,7 @@
   <div class="stop">
     <div class="time">19:00</div>
     <div class="info">
-      <div class="name">📍 블루라인파크 (일몰) <span class="tag spot">하이라이트</span></div>
+      <div class="name">📍 <a href="https://map.naver.com/p/search/해운대 블루라인파크 미포정거장" target="_blank">블루라인파크 (일몰)<span class="pin">🔗</span></a> <span class="tag spot">하이라이트</span></div>
       <div class="desc">미포정거장. 스카이캡슐/해변열차로 일몰 감상(19:40 전후). 7월 극성수기 09:00~21:30 운영.</div>
       <div class="park">🅿 <b>미포정거장 전용 주차장</b>. 여기 대면 블루라인파크 → 오륙도19호 모두 도보권.</div>
     </div>
@@ -174,7 +178,7 @@
   <div class="stop">
     <div class="time">20:30</div>
     <div class="info">
-      <div class="name">🍽 오륙도19호 <span class="tag meal">밤 · 랍스터</span></div>
+      <div class="name">🍽 <a href="https://map.naver.com/p/search/오륙도19호 미포" target="_blank">오륙도19호<span class="pin">🔗</span></a> <span class="tag meal">밤 · 랍스터</span></div>
       <div class="desc">미포, 블루라인파크 바로 옆. 랍스터 코스. 실내라 날씨 무관.</div>
       <div class="park">🅿 <b>블루라인파크 주차장에서 도보 이동 가능</b>(차 안 빼도 됨). → 식사 후 숙소 복귀.</div>
     </div>
@@ -188,7 +192,7 @@
   <div class="stop">
     <div class="time">10:00</div>
     <div class="info">
-      <div class="name">🏨 숙소 출발 <span class="tag hotel">숙소</span></div>
+      <div class="name">🏨 <a href="https://map.naver.com/p/search/광안리슈빌디에스" target="_blank">숙소 출발<span class="pin">🔗</span></a> <span class="tag hotel">숙소</span></div>
       <div class="desc">워터파크까지 차 10분.</div>
     </div>
   </div>
@@ -196,7 +200,7 @@
   <div class="stop">
     <div class="time">10:30</div>
     <div class="info">
-      <div class="name">📍 클럽디오아시스 스파&워터파크 <span class="tag spot">종일</span></div>
+      <div class="name">📍 <a href="https://map.naver.com/p/search/클럽디오아시스 스파 워터파크" target="_blank">클럽디오아시스 스파&워터파크<span class="pin">🔗</span></a> <span class="tag spot">종일</span></div>
       <div class="desc">해운대 엘시티. 오션뷰 인피니티풀 + 찜질방. 점심은 내부 식당.</div>
       <div class="park">🅿 <b>엘시티 건물 주차장 이용</b>(워터파크 자체 주차). 별도 이동 없음.</div>
     </div>
@@ -205,7 +209,7 @@
   <div class="stop">
     <div class="time">20:00</div>
     <div class="info">
-      <div class="name">🍽 해운대시장 곰장어골목 <span class="tag meal">저녁 확정</span></div>
+      <div class="name">🍽 <a href="https://map.naver.com/p/search/해운대시장 곰장어골목" target="_blank">해운대시장 곰장어골목<span class="pin">🔗</span></a> <span class="tag meal">저녁 확정</span></div>
       <div class="desc">짚불곰장어. 소금·양념 반반. 부산다운 로컬 맛.</div>
       <div class="park">🅿 시장 안이라 자체 주차 없음 → <b>해운대해수욕장 공영주차장</b>에 대고 도보 5~10분. (워터파크에서 차 5분)</div>
     </div>
@@ -235,7 +239,7 @@
   <div class="stop">
     <div class="time">11:30</div>
     <div class="info">
-      <div class="name">🍽 나막집 <span class="tag meal">점심</span></div>
+      <div class="name">🍽 <a href="https://map.naver.com/p/search/나막집 광안" target="_blank">나막집<span class="pin">🔗</span></a> <span class="tag meal">점심</span></div>
       <div class="desc">민락동 돼지국밥(미쉐린 가이드 등재). 11:30 오픈런.</div>
       <div class="park">🅿 숙소에서 <b>차 3분 / 도보 5분</b>. 가게 인근 공영·노상 주차. (체크아웃 짐 있으면 차로)</div>
     </div>
@@ -244,7 +248,7 @@
   <div class="stop">
     <div class="time">13:00</div>
     <div class="info">
-      <div class="name">📍 해동용궁사 <span class="tag spot">기장</span></div>
+      <div class="name">📍 <a href="https://map.naver.com/p/search/해동용궁사" target="_blank">해동용궁사<span class="pin">🔗</span></a> <span class="tag spot">기장</span></div>
       <div class="desc">바다 위 사찰. 가족사진 명소. 운영 04~20시.</div>
       <div class="park">🅿 <b>대형 전용 주차장 있음</b>(유료). 주차 편함.</div>
     </div>
@@ -253,7 +257,7 @@
   <div class="stop">
     <div class="time">14:30</div>
     <div class="info">
-      <div class="name">📍 롯데프리미엄아울렛 동부산 <span class="tag spot">쇼핑</span></div>
+      <div class="name">📍 <a href="https://map.naver.com/p/search/롯데프리미엄아울렛 동부산점" target="_blank">롯데프리미엄아울렛 동부산<span class="pin">🔗</span></a> <span class="tag spot">쇼핑</span></div>
       <div class="desc">기장. 용궁사 근처. 매일 10:30~21:00.</div>
       <div class="park">🅿 <b>대형 전용 주차장</b>. 넉넉함.</div>
     </div>
@@ -262,7 +266,7 @@
   <div class="stop">
     <div class="time">17:00</div>
     <div class="info">
-      <div class="name">🍽 가원밥상 <span class="tag meal">늦은 점심~저녁</span></div>
+      <div class="name">🍽 <a href="https://map.naver.com/p/search/가원밥상 대연동" target="_blank">가원밥상<span class="pin">🔗</span></a> <span class="tag meal">늦은 점심~저녁</span></div>
       <div class="desc">대연동 아구수육. 화~일 8:50~20:50. 부산역까지 차 10분.</div>
       <div class="park">🅿 자체/인근 주차 가능(리뷰상 주차 양호).</div>
     </div>
@@ -271,7 +275,7 @@
   <div class="stop">
     <div class="time">19:00</div>
     <div class="info">
-      <div class="name">🚉 부산역 <span class="tag hub">해산</span></div>
+      <div class="name">🚉 <a href="https://map.naver.com/p/search/부산역" target="_blank">부산역<span class="pin">🔗</span></a> <span class="tag hub">해산</span></div>
     </div>
   </div>
 </div>
