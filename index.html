@@ -72,15 +72,41 @@
   .restab {
     width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px;
     overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 13px;
+    table-layout: fixed;
   }
-  .restab th { background: #264653; color: #fff; padding: 10px 12px; text-align: left; font-size: 12.5px; }
-  .restab td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+  .restab th { background: #264653; color: #fff; padding: 10px 10px; text-align: left; font-size: 12.5px; word-break: keep-all; }
+  .restab td { padding: 10px 10px; border-bottom: 1px solid #eee; word-break: keep-all; vertical-align: top; }
   .restab tr:last-child td { border-bottom: none; }
+  /* 식당 예약표 4컬럼 너비 */
+  .restab.res4 th:nth-child(1), .restab.res4 td:nth-child(1) { width: 21%; }
+  .restab.res4 th:nth-child(2), .restab.res4 td:nth-child(2) { width: 13%; }
+  .restab.res4 th:nth-child(3), .restab.res4 td:nth-child(3) { width: 17%; }
+  .restab.res4 th:nth-child(4), .restab.res4 td:nth-child(4) { width: 49%; }
+  /* 주차표 2컬럼 너비 */
+  .restab.res2 th:nth-child(1), .restab.res2 td:nth-child(1) { width: 30%; }
+  .restab.res2 th:nth-child(2), .restab.res2 td:nth-child(2) { width: 70%; }
+  @media (max-width: 600px) {
+    .restab { font-size: 12px; }
+    .restab th, .restab td { padding: 8px 7px; }
+  }
   .ok { color: #2d6a4f; font-weight: 700; }
   .no { color: #c0392b; font-weight: 700; }
   .note { font-size: 12px; color: #777; margin-top: 10px; line-height: 1.6; }
   .legend { font-size: 12px; color: #666; margin: -6px 0 16px; }
   .legend span { margin-right: 12px; }
+  .toc {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .toc a {
+    flex: 1; min-width: 110px; text-align: center; text-decoration: none;
+    background: #fff; color: #264653; font-weight: 700; font-size: 14px;
+    padding: 12px 8px; border-radius: 10px; border: 1.5px solid #e0e0e0;
+    transition: all 0.15s;
+  }
+  .toc a:hover { background: #2a9d8f; color: #fff; border-color: #2a9d8f; }
+  .toc a .num { display: block; font-size: 11px; opacity: 0.6; margin-bottom: 2px; }
+  .toc a:hover .num { opacity: 0.85; }
+  html { scroll-behavior: smooth; }
   @media print {
     body { background: #fff; padding: 0; font-size: 12px; }
     .day, .todo, .restab, header { box-shadow: none; border: 1px solid #ddd; }
@@ -101,6 +127,13 @@
   </div>
 </header>
 
+<nav class="toc">
+  <a href="#sec-plan"><span class="num">01</span>일정</a>
+  <a href="#sec-todo"><span class="num">02</span>TO-DO</a>
+  <a href="#sec-parking"><span class="num">03</span>주차</a>
+  <a href="#sec-pack"><span class="num">04</span>필수 준비물</a>
+</nav>
+
 <div class="legend">
   <span>🍽 <b>식사</b></span>
   <span>📍 <b>관광/명소</b></span>
@@ -110,7 +143,7 @@
 </div>
 
 <!-- DAY 1 -->
-<div class="day">
+<div id="sec-plan" class="day">
   <div class="day-head">DAY 1 · 7/17 (금) <span>— 부산역 합류 · 남포/영도 · 미포 일몰</span></div>
 
   <div class="stop">
@@ -151,7 +184,7 @@
   <div class="stop">
     <div class="time">16:30</div>
     <div class="info">
-      <div class="name">🏨 <a href="https://map.naver.com/p/search/광안리슈빌디에스" target="_blank">광안리슈빌DS 체크인<span class="pin">🔗</span></a> <span class="tag hotel">숙소</span></div>
+      <div class="name">🏨 <a href="https://naver.me/GCvimi1i" target="_blank">광안리슈빌DS 체크인<span class="pin">🔗</span></a> <span class="tag hotel">숙소</span></div>
       <div class="desc">민락동. 짐 풀고 휴식 후 출발.</div>
       <div class="park">🅿 건물 지하주차장 이용(체크인 시 확인).</div>
     </div>
@@ -178,7 +211,7 @@
   <div class="stop">
     <div class="time">20:30</div>
     <div class="info">
-      <div class="name">🍽 <a href="https://map.naver.com/p/search/오륙도19호 미포" target="_blank">오륙도19호<span class="pin">🔗</span></a> <span class="tag meal">밤 · 랍스터</span></div>
+      <div class="name">🍽 <a href="https://naver.me/xP8TIwWO" target="_blank">오륙도19호<span class="pin">🔗</span></a> <span class="tag meal">밤 · 랍스터</span></div>
       <div class="desc">미포, 블루라인파크 바로 옆. 랍스터 코스. 실내라 날씨 무관.</div>
       <div class="park">🅿 <b>오륙도19호 건물(삼환미포씨랜드) 지하주차장</b> 이용, 식사 시 주차 지원. 블루라인파크 주차장이 마감돼도 여기 대면 됨.</div>
     </div>
@@ -192,7 +225,7 @@
   <div class="stop">
     <div class="time">10:00</div>
     <div class="info">
-      <div class="name">🏨 <a href="https://map.naver.com/p/search/광안리슈빌디에스" target="_blank">숙소 출발<span class="pin">🔗</span></a> <span class="tag hotel">숙소</span></div>
+      <div class="name">🏨 <a href="https://naver.me/GCvimi1i" target="_blank">숙소 출발<span class="pin">🔗</span></a> <span class="tag hotel">숙소</span></div>
       <div class="desc">워터파크까지 차 10분.</div>
     </div>
   </div>
@@ -282,7 +315,7 @@
 
 <!-- 식당 예약 가능 여부 -->
 <div class="section-title">🍽 식당 예약 / 원격 줄서기 정리</div>
-<table class="restab">
+<table class="restab res4">
   <tr><th>식당</th><th>예약</th><th>원격 줄서기</th><th>메모</th></tr>
   <tr>
     <td>이재모피자 부산역점</td>
@@ -327,7 +360,7 @@
 </div>
 
 <!-- 투두 -->
-<div class="section-title">✅ 출발 전 TO-DO 리스트</div>
+<div id="sec-todo" class="section-title">✅ 출발 전 TO-DO 리스트</div>
 <div class="todo">
   <div class="todo-item">
     <div class="chk"></div>
@@ -377,8 +410,8 @@
 </div>
 
 <!-- 주차 요약 -->
-<div class="section-title">🅿 주차 한눈에 정리</div>
-<table class="restab">
+<div id="sec-parking" class="section-title">🅿 주차 한눈에 정리</div>
+<table class="restab res2">
   <tr><th>장소</th><th>주차</th></tr>
   <tr><td>이재모피자 부산역점</td><td><b class="ok">주차 불필요</b> — 부산역 건물 2층. 가족 차는 부산역 주차장</td></tr>
   <tr><td>국제시장 · BIFF광장</td><td><b>자갈치 지하 공영주차장</b>에 대고 도보 (국제시장·BIFF광장 도보권)</td></tr>
@@ -396,6 +429,20 @@
 <div class="note">
   핵심: 부산역점으로 가면 첫 끼 주차 고민이 사라짐. 차로 이동하는 <b>국제시장만 자갈치 지하 공영주차장</b>에 대면 됨. 나머지는 다 주차장 갖춰져 있어 차 여행에 무리 없음.
 </div>
+
+<!-- 준비물 -->
+<div id="sec-pack" class="section-title">🎒 필수 준비물</div>
+<div class="todo">
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+  <div class="todo-item"><div class="chk"></div><div class="todo-txt"><div class="t1">&nbsp;</div></div></div>
+</div>
+<div class="note">※ 수영복·여벌옷(워터파크), 보조배터리, 상비약, 우산(장마 대비), 선크림 등 직접 채워 넣으세요.</div>
 
 <div class="note" style="margin-top:24px; text-align:center; font-size:11px;">
   ※ 운영시간·예약 정책은 변동될 수 있으니 방문 전 각 매장에 재확인 권장. 인쇄: 브라우저에서 Ctrl/⌘+P → PDF 저장 가능.
